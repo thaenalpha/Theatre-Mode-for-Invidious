@@ -1,0 +1,32 @@
+/* ==UserStyle==
+@name         Theatre Mode for Invidious
+@version      v1.0.0
+@namespace    userstyles.world/user/thaenalpha
+@description  Transform Invidious to Theatre mode. Includes full-width, minimize the header and display it with the mouse hover.
+@author       thaenalpha
+@license      No License
+==/UserStyle== */
+@-moz-document url-prefix("https://yewtu.be/watch?v="),
+url-prefix("https://y.com.sb/watch?v="),
+url-prefix("https://vid.puffyan.us/watch?v="),
+url-prefix("https://youtube.076.ne.jp/watch?v="),
+url-prefix("https://yt.artemislena.eu/watch?v="),
+regexp("https?://(?:\\binv\\b|invidious)\\..+?/watch\\?v=.*") {
+    #contents {
+        width: 100%
+    }
+    #player-container,
+    .navbar {
+        margin: 0
+    }
+    .navbar {
+        overflow: hidden;
+        height: 7px
+    }
+    .navbar:hover {
+        height: auto;
+    }
+    .searchbar {
+        padding: 7px 0 !important
+    }
+}
